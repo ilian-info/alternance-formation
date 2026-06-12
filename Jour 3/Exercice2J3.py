@@ -1,0 +1,5 @@
+notes = (12, 15 ,8, 17)
+moyenne = sum(notes) / len(notes)
+maximum = max(notes)
+print("Moyenne :", moyenne)
+print("Note la plus haute :", maximum)
