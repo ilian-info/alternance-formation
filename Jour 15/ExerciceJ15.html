@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head><meta charset="UTF-8"><title>Accueil</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Mon Site</h1>
+
+<nav>
+    <a href="accueil.html">Accueil</a>
+    <a href="fiches.html">Liste des fiches</a>
+    <a href="contact.html">Contact</a>
+</nav>
+<p> Bienvenue sur le site. Vous trouverez une liste de fiches et un formulaire de contact.</p>
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head><meta charset="UTF-8"><title>Liste des fiches</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Mon Site</h1>
+
+<nav>
+    <a href="accueil.html">Accueil</a>
+    <a href="fiches.html">Liste des fiches</a>
+    <a href="contact.html">Contact</a>
+</nav>
+<h2>Liste des fiches</h2>
+
+<ul>
+    <li>Fiche 1</li>
+    <li>Fiche 2</li>
+    <li>Fiche 3</li>
+</ul>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head><meta charset="UTF-8"><title>Contact</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<h1>Mon Site</h1>
+
+<nav>
+    <a href="accueil.html">Accueil</a>
+    <a href="fiches.html">Liste des fiches</a>
+    <a href="contact.html">Contact</a>
+</nav>
+<h2>Contact</h2>
+
+<form onsubmit="return verifier()">
+<label>Nom :<input type="text" id="nom"></label><br>
+<label>Email :<input type="text" id="email"></label><br>
+<button type="submit">Envoyer</button>
+<p id="message"></p>
+
+</form>
+</body>
+</html>
+
+<script> 
+
+function verifier() {
+    var nom = document.getElementById("nom").value;
+    var email = document.getElementById("email").value;
+    if (nom ==="" || email ==="") {
+        document.getElementById("message").textContent ="Remplir tous les champs";
+        return false;
+    }
+    return true;
+}
+
+
+
+
+body{ font-family: sans-serif; margin: 40px; background-color: white; }
+H1{ color: Black; padding: 20px; }
+H2{ color: Black; padding: 15px; margin-right: 10px; }
+nav a{ margin-right: 10px; color: grey; }
+message{ color: red; }
+button { padding: 10px}

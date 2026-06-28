@@ -1,0 +1,13 @@
+<form onsubmit="return verifier()">
+<input type="texte" id="email">
+<input type="text" id="nom">
+<button type= submit>Envoyer</button>
+<p id="message"</p>
+</form>
+<script>
+function verifier()
+var email= document.getElementbyid("email").value
+var nom = document.getElementbyid("nom").value
+if (email===""; nom==="")
+document.getElementbyid("message").texteContent="Envoie impossible car champ vide"
+return false;
