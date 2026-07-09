@@ -8,10 +8,11 @@ $pdo = new PDO("mysql:host=localhost;dbname=gestialt;charset=utf8", "root", "");
 <h1>Interventions</h1>
 <a href="ajouter.php">Nouvelle intervention</a>
 <table>
-  <tr><th>Titre</th><th>Technicien</th><th>Date</th><th>Statut</th><th>Changement</th></tr>
+  <tr><th>Titre</th><th>Description</th><th>Technicien</th><th>Date</th><th>Statut</th><th>Changement</th></tr>
    <?php foreach ($liste as $i): ?>
     <tr>
       <td><?= htmlspecialchars($i['titre']) ?></td>
+      <td><?= htmlspecialchars($i['description']) ?></td>
       <td><?= htmlspecialchars($i['technicien']) ?></td>
       <td><?= htmlspecialchars($i['date_intervention']) ?></td>
       <td><?= htmlspecialchars($i['statut']) ?></td>
